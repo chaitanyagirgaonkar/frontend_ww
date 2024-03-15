@@ -45,8 +45,8 @@ function Home() {
                         <li className='cursor-pointer'><Link to="/container/dashboard">Dashboard</Link></li> */}
                     </ul>
                 </div>
-                {/* <div className='sm:flex gap-3 hidden '>
-                    {
+                <div className='sm:flex gap-3 hidden '>
+                    {/* {
                         user?.username ?
                             <>
                                 <FaUserCircle size={32} className="text-blue-500" />
@@ -54,13 +54,13 @@ function Home() {
                             </>
                             :
                             (
-                                <>
-                                    <button className='rounded-lg bg-blue-500 px-3 py-2 font-mono text-white text-1xl' onClick={() => navigate('/login')}>Login</button>
-                                    <button className='rounded-lg bg-blue-500 px-3 py-2 font-mono text-white text-1xl' onClick={() => navigate('/register')}>Register</button>
-                                </>
+                                <> */}
+                    <button className='rounded-lg bg-blue-500 px-3 py-2 font-mono text-white text-1xl' onClick={() => navigate('/login')}>Login</button>
+                    <button className='rounded-lg bg-blue-500 px-3 py-2 font-mono text-white text-1xl' onClick={() => navigate('/register')}>Register</button>
+                    {/* </>
                             )
-                    }
-                </div> */}
+                    } */}
+                </div>
 
             </div>
             <div className='grid  sm:grid-cols-2 grid-rows-1 gap-0 sm:gap-3  sm:mt-0 mt-5'>
