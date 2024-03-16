@@ -41,8 +41,9 @@ function Home() {
                     <ul className='flex justify-between items-center gap-7 text-gray-500 text-[18px]'>
                         <li className='cursor-pointer'><Link to='/'>Home</Link></li>
                         {/* <li className='cursor-pointer'><Link to='/container/all-pdf'>Notes</Link></li>
-                        <li className='cursor-pointer'><Link to="/container/all-project">Project</Link></li>
-                        <li className='cursor-pointer'><Link to="/container/dashboard">Dashboard</Link></li> */}
+                        <li className='cursor-pointer'><Link to="/container/all-project">Project</Link></li> */}
+                        <li className='cursor-pointer'><Link to="/container/profile">Profile</Link></li>
+                        <li className='cursor-pointer'><Link to="/container/report">Report</Link></li>☻
                     </ul>
                 </div>
                 <div className='sm:flex gap-3 hidden '>
@@ -76,7 +77,7 @@ function Home() {
                         </div>
                         <p className='text-gray-500 '>"Struggling to keep up with your academic workload? EduScribe has you covered! Dive into a world of organized learning with our one-stop platform. "</p>
                         <div>
-                            <button className='rounded-lg bg-blue-500 px-3 py-3 font-mono text-white text-1xl' onClick={() => navigate('/container/all-pdf')}>View Model</button>
+                            <button className='rounded-lg bg-blue-500 px-3 py-3 font-mono text-white text-1xl' onClick={() => navigate('/container/report')}>View Model</button>
 
                         </div>
                     </div>

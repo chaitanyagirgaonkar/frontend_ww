@@ -39,7 +39,7 @@ function Register() {
             return;
         }
         try {
-            const response = await axios.post('/user/register',
+            const response = await axios.post('/v1/user/register',
                 JSON.stringify({ fullName: fullName, email, password: pwd }),
                 {
                     headers: {
@@ -51,16 +51,18 @@ function Register() {
             console.log(response?.data);
             console.log(JSON.stringify(response));
             toast.success("User Register Successfully")
+            navigate("/login")
             setUser("")
             setPwd("")
             setEmail("")
             setClgName("")
-            setTimeout(() => {
-                navigate('/')
-            }, 2000);
+            // setTimeout(() => {
+            //     navigate('/login')
+            // }, 2000);
+
         } catch (err) {
 
-            if (!err?.response) {
+            if (!err) {
                 toast.error("No Server Response")
             } else if (err.response?.status === 409) {
                 toast.error("User with email or username already exists")

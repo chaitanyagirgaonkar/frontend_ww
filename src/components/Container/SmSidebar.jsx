@@ -8,6 +8,8 @@ import { TfiArrowCircleRight } from "react-icons/tfi";
 import useAuth from '../../hooks/useAuth';
 // import User from '../User/User';
 import { FaRegUser } from "react-icons/fa6";
+import { FaFileMedical } from "react-icons/fa6";
+
 
 function SmSidebar() {
     // const { sidebar, setSidebar, auth } = useAuth()
@@ -44,9 +46,9 @@ function SmSidebar() {
 
                         </div>
                     </div>
-                    {/* <div>
+                    <div>
                         <NavLink
-                            to={"/container/dashboard"}
+                            to={"/container/profile"}
                             className={({ isActive }) => `${isActive && "text-blue-500 bg-[#f5f5f5]"} flex justify-center    hover:text-blue-500 " hover:bg-[#f5f5f5] cursor-pointer px-4 py-2 w-[100%]  font-semibold mt-1 rounded-lg`}
                         >
                             <div className=" flex  items-center ">
@@ -58,17 +60,17 @@ function SmSidebar() {
                     </div>
                     <div>
                         <NavLink
-                            to={"/container/all-pdf"}
+                            to={"/container/report"}
                             className={({ isActive }) => `${isActive && "text-blue-500 bg-[#f5f5f5]"} flex justify-center    hover:text-blue-500 " hover:bg-[#f5f5f5] cursor-pointer px-4 py-2  w-[100%]  font-semibold mt-1 rounded-lg `}
                         >
                             <div className=" flex  items-center ">
                                 {" "}
-                                <GrNotes size={22} className="" />
+                                <FaFileMedical size={22} className="" />
                             </div>
 
                         </NavLink>
                     </div>
-                    <div>
+                    {/* <div>
                         <NavLink
                             to={"/container/all-project"}
                             className={({ isActive }) => `${isActive && "text-blue-500 bg-[#f5f5f5]"} flex justify-center    hover:text-blue-500 " hover:bg-[#f5f5f5] cursor-pointer px-4 py-2 w-[100%]  font-semibold mt-1 rounded-lg`}

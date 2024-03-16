@@ -25,7 +25,7 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/user/login',
+            const response = await axios.post('/v1/user/login',
                 JSON.stringify({ email, password }),
                 {
                     headers: { 'Content-Type': 'application/json' },
@@ -34,14 +34,14 @@ function Login() {
             )
             console.log(response.data)
             const accessToken = response?.data?.data.accessToken;
-            console.log(accessToken);
-            setAuth({ email, accessToken })
+            const userId = response.data.data.user._id
+            console.log(userId);
+            setAuth({ email, accessToken, userId })
             toast.success("User Login Successfully !")
+            navigate(from, { replace: true })
+            // navigate("/")
             setUsername("")
             setPassword("")
-            setTimeout(() => {
-                navigate(from, { replace: true })
-            }, 2000);
         } catch (err) {
 
             if (!err) {
